@@ -17,7 +17,6 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -36,3 +35,230 @@
     transform: rotate(360deg);
   }
 }
+
+/* Navegacion */
+
+.navbar {
+  background-color: #333; /* Color de fondo del navbar */
+  color: #fff; /* Color del texto del navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff5722;
+}
+
+/* Estilos de la grilla */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas automáticas y mínimas de 300px */
+  grid-gap: 30px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  border: 2px solid #777;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  border-color: #ff5722;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los títulos y subtítulos */
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.subtitulo {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Estilos para la descripción del menú */
+.descripcion {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el nombre de la receta */
+.nombreReceta {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Estilos para la sección de ingredientes */
+.nombreIngredientes {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Estilos para la lista de ingredientes */
+.listaIngredientes {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Estilos para la cantidad de porciones */
+.cantidadPorciones {
+  font-size: 16px;
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  /* Estilos específicos para pantallas más pequeñas */
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Columnas automáticas y 100% de ancho */
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .grid-item {
+    margin: 10px;
+  }
+
+
+}
+.button {
+  background-color: transparent;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+  border-radius: 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para el botón al pasar el mouse sobre él */
+.button:hover {
+  background-color: #ff5722;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.container{
+  width: 100%;
+  margin: .4% auto;
+  display: flex;
+  justify-content: center;
+}
+/* Estilos para el campo de búsqueda */
+.search-input {
+  width: 60%;
+  max-width: 100%; /* Ancho máximo para mantenerlo responsivo */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+  margin: 1% auto;
+}
+
+.search-input:focus {
+  border-color: #ff5722; /* Cambia el color del borde al enfocar */
+  outline: none; /* Elimina el borde resaltado al hacer clic */
+}
+
+/* Estilos para el icono de búsqueda (opcional) */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+/* Estilos para el contenedor del campo de búsqueda (ajustar según tu diseño) */
+.search-container {
+  position: relative;
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+/* Media query para hacerlo más responsivo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .search-container {
+    max-width: 100%;
+  }
+}
+
